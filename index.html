@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-P6SW86D");
+    </script>
+    <!-- End Google Tag Manager -->
+    <title>JavaScript в космосе. Что такое фронтенд и что он умеет</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- prettier-ignore -->
+    <link rel="stylesheet" href="node_modules/@shower/ribbon/styles/styles.css">
+    <style>
+      .shower {
+        --slide-ratio: calc(16 / 9);
+        --ribbon-size: 40px;
+        --slide-side: 41px;
+        --color-grey: #353535;
+      }
+
+      .progress::before {
+        background-color: #ff0000;
+      }
+
+      .slide {
+        padding-top: 51px;
+        background-image: url("pictures/4.png"), url("pictures/slide-cover.png");
+        background-repeat: no-repeat, no-repeat;
+        background-size: 199px, 100%;
+        background-position: 127px calc(100% - 27px), center;
+      }
+
+      .slide.clear {
+        background-image: none;
+      }
+
+      .slide::before {
+        position: absolute;
+        content: "X";
+        bottom: 25px;
+        left: 104px;
+      }
+
+      .slide.clear::before {
+        content: "";
+      }
+
+      .slide::after {
+        top: auto;
+        bottom: 10px;
+        left: auto;
+        right: 30px;
+        background: none;
+        color: #1a1a1a;
+      }
+
+      .slide h2 {
+        color: #1a1a1a;
+        font-size: 60px;
+      }
+
+      .slide h2.shout {
+        font-size: 100px;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        width: 80%;
+      }
+
+      .slide h2.shout.elevated {
+        margin-top: -35px;
+      }
+
+      .slide h2.shout.small {
+        font-size: 3em;
+      }
+
+      .slide .brand {
+        color: #cc0000;
+      }
+
+      .slide ol,
+      .slide ul {
+        padding-left: 40px;
+      }
+
+      .slide li {
+        font-size: 32px;
+      }
+
+      .slide pre {
+        font-size: 21px;
+        padding-left: 41px;
+      }
+
+      .cover {
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body class="shower list">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-P6SW86D"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header class="caption">
+      <h1>JavaScript в космосе. Что такое фронтенд и что он умеет</h1>
+      <p>
+        <a href="https://alexey-avdeev.com/">Алексей Авдеев</a>,
+        <a href="https://mish.design/">Mish</a>
+      </p>
+    </header>
+
+    <section class="slide clear" id="cover">
+      <div style="width: 640px; padding-top: 30px; margin-left: -10px">
+        <h2>JavaScript в космосе. Что такое фронтенд и что он умеет</h2>
+        <p>
+          <a href="https://alexey-avdeev.com/">Алексей Авдеев</a>,
+          <a href="https://mish.design/">Mish</a>
+        </p>
+      </div>
+      <img src="pictures/breakpoints.png" alt="" />
+
+      <style>
+        .shower #cover {
+          --slide-side: 60px;
+        }
+        #cover {
+          background: #fff url("pictures/title-cover.png") no-repeat center center;
+          background-size: contain;
+        }
+        #cover h2 {
+          margin: 0;
+          color: #000;
+          font-size: 62px;
+        }
+        #cover p {
+          margin: 18px 0 0;
+          color: #000;
+          font-size: 24px;
+        }
+        #cover p a {
+          color: #000;
+        }
+        #cover img {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          width: 400px;
+        }
+      </style>
+    </section>
+
+    <section class="slide">
+      <img class="cover w" src="pictures/mish_2023.png" alt="" />
+    </section>
+
+    <section class="slide">
+      <img class="cover w" src="pictures/tweet1.png" alt="" style="width: 80%" />
+    </section>
+
+    <section class="slide">
+      <img class="cover w" src="pictures/fc2022.png" alt="" />
+    </section>
+
+    <section class="slide">
+      <img class="cover w" src="pictures/skillbox.png" alt="" />
+    </section>
+
+    <section class="slide">
+      <img class="cover w" src="pictures/jsonapi_youtube.jpg" alt="" />
+    </section>
+
+    <section class="slide">
+      <img class="cover w" src="pictures/docker_youtube.jpg" alt="" />
+    </section>
+
+    <section class="slide">
+      <img class="cover w" src="pictures/maxresdefault.jpg" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Задачи CTO</h2>
+    </section>
+
+    <section class="slide">
+      <img class="cover h" src="pictures/scale_1200.jpeg" alt="" />
+    </section>
+
+    <section class="slide">
+      <img class="cover h" src="pictures/NCSAMosaic.jpeg" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">
+        <img
+          src="pictures/qrcode_caniuse.com.png"
+          alt=""
+          style="width: 30%; margin-bottom: -40px; margin-top: -50px"
+        />
+        <br />
+        <a href="https://caniuse.com/usage-table" style="font-size: 0.8em">caniuse.com</a>
+      </h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Что можно сделать?</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Веб-сайт</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Слайды для выступления</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Мобильное приложение</h2>
+    </section>
+
+    <section class="slide">
+      <img class="cover w" src="pictures/Android-System-Webview.jpeg" alt="" style="width: 60%" />
+    </section>
+
+    <section class="slide">
+      <img class="cover h" src="pictures/webview_browser_2_200.png" alt="" style="height: 90%" />
+    </section>
+
+    <section class="slide">
+      <img class="cover w" src="pictures/2048.png" alt="" style="width: 72%" />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Progressive<br />web&nbsp;app<br />(PWA)</h2>
+    </section>
+
+    <section class="slide">
+      <img class="cover w" src="pictures/pwa.png" alt="" style="width: 80%" />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">
+        <img
+          src="pictures/qrcode_whatpwacando.today.png"
+          alt=""
+          style="width: 30%; margin-bottom: -40px; margin-top: -50px"
+        />
+        <br />
+        <a href="https://whatpwacando.today/" style="font-size: 0.8em">whatpwacando.today</a>
+      </h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Trusted web&nbsp;activity<br />(TWA)</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">
+        <img
+          src="pictures/qrcode_www.pwabuilder.com.png"
+          alt=""
+          style="width: 30%; margin-bottom: -40px; margin-top: -50px"
+        />
+        <br />
+        <a href="https://www.pwabuilder.com/" style="font-size: 0.8em">pwabuilder.com</a>
+      </h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Бэкенд</h2>
+    </section>
+
+    <section class="slide clear">
+      <img class="cover h" src="pictures/headless.jpeg" alt="" />
+    </section>
+
+    <section class="slide clear">
+      <img class="cover h" src="pictures/headless-2.jpeg" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Десктоп</h2>
+    </section>
+
+    <section class="slide clear">
+      <img class="cover h" src="pictures/vscode-1.png" alt="" />
+    </section>
+    <section class="slide clear">
+      <img class="cover h" src="pictures/vscode-2.png" alt="" />
+    </section>
+    <section class="slide clear">
+      <img class="cover h" src="pictures/vscode-3.png" alt="" />
+    </section>
+    <section class="slide clear">
+      <img class="cover h" src="pictures/vscode-4.png" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Игра</h2>
+    </section>
+
+    <section class="slide clear" style="background-color: #594838">
+      <img class="cover h" src="pictures/quake-js.png" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">
+        <img
+          src="pictures/qrcode_www.quakejs.com.png"
+          alt=""
+          style="width: 30%; margin-bottom: -40px; margin-top: -50px"
+        />
+        <br />
+        <a href="http://www.quakejs.com/" style="font-size: 0.8em">quakejs.com</a>
+      </h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">VR / AR</h2>
+    </section>
+
+    <section class="slide">
+      <img class="cover w" src="pictures/webxr-logo.svg" alt="" style="width: 80%" />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">
+        <img
+          src="pictures/qrcode_immersiveweb.dev.png"
+          alt=""
+          style="width: 30%; margin-bottom: -40px; margin-top: -50px"
+        />
+        <br />
+        <a href="https://immersiveweb.dev/" style="font-size: 0.8em">immersiveweb.dev</a>
+      </h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Банкомат</h2>
+    </section>
+
+    <section class="slide clear">
+      <img class="cover h" src="pictures/atm.jpeg" alt="" />
+    </section>
+
+    <section class="slide clear" style="background-color: #b74b01">
+      <img class="cover h" src="pictures/atm-photo.jpeg" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Касса</h2>
+    </section>
+
+    <section class="slide clear">
+      <img class="cover h" src="pictures/cashbox-cover.jpeg" alt="" />
+    </section>
+
+    <section class="slide clear">
+      <img class="cover h" src="pictures/cashbox.png" alt="" />
+    </section>
+
+    <section class="slide clear">
+      <img class="cover h" src="pictures/cashbox-how.png" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Умные<br />устройства</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">
+        <img
+          src="pictures/qrcode_plasma.sberdevices.ru.png"
+          alt=""
+          style="width: 30%; margin-bottom: -40px; margin-top: -50px"
+        />
+        <br />
+        <a
+          href="https://plasma.sberdevices.ru/current/?path=/docs/about--page"
+          style="font-size: 0.8em"
+          >plasma.sberdevices.ru</a
+        >
+      </h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Операционная система</h2>
+    </section>
+
+    <section class="slide clear">
+      <img class="cover w" src="pictures/overview.png" alt="" />
+    </section>
+
+    <section class="slide clear">
+      <img class="cover h" src="pictures/ChromeOS_89_screenshot.webp" alt="" />
+    </section>
+
+    <section class="slide clear">
+      <img class="cover w" src="pictures/chrome-book.jpeg" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Интерфейс космического корабля</h2>
+    </section>
+
+    <section class="slide clear">
+      <img class="cover h" src="pictures/dragon-crew.png" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Да здравствует веб-платформа!</h2>
+    </section>
+
+    <section class="slide" id="last-slide">
+      <h2>👏 Спасибо!</h2>
+
+      <ul>
+        <li>👨 Алексей Авдеев</li>
+        <li>🌐 <a href="https://github.com/avdeev">github.com/avdeev</a></li>
+        <li>
+          🌐
+          <a href="https://twitter.com/avdeev_alexey">twitter.com/avdeev_alexey</a>
+        </li>
+        <li>
+          🌐
+          <a href="https://vk.com/alexey.avdeev">vk.com/alexey.avdeev</a>
+        </li>
+
+        <li>🌐 Продуктовая лаборатория <a href="https://mish.design/">Mish</a></li>
+      </ul>
+      <img src="pictures/qrcode.png" alt="телеграм qr" />
+      <style>
+        #last-slide li {
+          font-size: 28px;
+        }
+
+        #last-slide img {
+          height: 300px;
+          position: absolute;
+          right: 95px;
+          top: 120px;
+        }
+      </style>
+    </section>
+
+    <footer class="badge">
+      <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+    </footer>
+
+    <div class="progress"></div>
+
+    <script src="node_modules/@shower/core/dist/shower.js"></script>
+    <!-- Copyright © 2021 Yours Truly, Famous Inc. -->
+  </body>
+</html>
